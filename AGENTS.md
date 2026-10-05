@@ -31,16 +31,22 @@ The site also introduces the Corkage Club: a community for wine enthusiasts inte
 
 This is a static HTML, CSS, and JavaScript website with a dependency-free Python build.
 
-- `scripts/build.py` — page templates and undated editorial articles; generates `dist/`
+- `scripts/build.py` — page templates, undated editorial articles, sitemap and robots; generates `dist/`
+- `scripts/restaurant_pages.py` — 42 static restaurant policy pages
+- `scripts/seo.py` — canonical URLs and honest, source-consistent structured data
 - `data.json` — canonical published policy records, scope, sources and editorial suggestions
 - `script.js` — directory search, filters and accessible restaurant dialogs
 - `styles.css` — shared styling
 - `research/` — working research, not served by the website
 - `tests/check_site.py` — build/data/internal-link regression checks
+- `tests/check_seo.py` — canonical, sitemap, structured-data and crawlable-content checks
+- `tests/check_live_seo.py` — public production HTTP/redirect verification
 - `tests/browser_smoke.py` — real-browser checks via installed agent-browser CLI
 - `vercel.json` — Vercel builds into `dist/`; only that directory is public
 
 Build with `python3 scripts/build.py`. Serve `dist/`, never the repository root. `scripts/prepare-data.py` records the initial migration and is not part of normal builds; rerunning it overwrites data.json.
+
+Canonical production is https://www.corkageclub.org. Maintain real HTML links to restaurant pages even when enhancing them with dialogs. Never invent ratings, publication dates or Search Console verification. Read README.md for the outstanding Search Console owner step. No analytics is installed.
 
 Waitlist and suggestion links open the existing Google Forms. Do not claim a submission succeeded from this site, and do not submit test data to live forms. Public-dining records are shown by default; seven special-scope records remain explicitly separated. Editorial guides are undated, with no fabricated historical publication dates.
 

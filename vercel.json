@@ -3,6 +3,11 @@
   "buildCommand": "python3 scripts/build.py",
   "outputDirectory": "dist",
   "framework": null,
+  "redirects": [
+    {"source": "/:path*", "has": [{"type": "host", "value": "corkageclub.org"}], "destination": "https://www.corkageclub.org/:path*", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "corkage.vercel.app"}], "destination": "https://www.corkageclub.org/:path*", "permanent": true},
+    {"source": "/index.html", "destination": "/", "permanent": true}
+  ],
   "headers": [
     { "source": "/(.*)", "headers": [
       {"key": "X-Content-Type-Options", "value": "nosniff"},
