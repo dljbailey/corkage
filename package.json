@@ -1,0 +1,10 @@
+{
+  "name": "london-corkage-club",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "python3 scripts/build.py && python3 tests/check_site.py && node --check script.js"
+  }
+}
