@@ -1,267 +1,79 @@
-// Fetch restaurant data
-let restaurantData = {};
-
-async function fetchData() {
-    try {
-        const response = await fetch('data.json');
-        restaurantData = await response.json();
-        renderRestaurantCards();
-        setupFilters();
-    } catch (error) {
-        console.error('Error loading restaurant data:', error);
+'use strict';
+(() => {
+  const form = document.querySelector('#filters');
+  if (!form) return;
+  const grid = document.querySelector('#restaurant-grid');
+  const dialog = document.querySelector('#restaurant-dialog');
+  const content = document.querySelector('#detail-content');
+  const fields = Object.fromEntries(['search', 'area', 'scope', 'sort', 'free'].map(id => [id, document.getElementById(id)]));
+  const labels = { public: 'Public dining', events: 'Private / group events', members: 'Members only', discretion: 'Ask management first', clarify: 'Policy needs clarification' };
+  let records = [];
+  let lastOpener = null;
+  const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeLink = value => { const u = new URL(value, location.href); if (u.protocol !== 'https:') throw new Error('Unsafe source URL'); return escape(u.href); };
+  const normalise = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  function updateURL(restaurant) {
+    const url = new URL(location.href);
+    for (const [key, value, fallback] of [['q', fields.search.value, ''], ['area', fields.area.value, 'all'], ['scope', fields.scope.value, 'public'], ['sort', fields.sort.value, 'name'], ['free', fields.free.checked ? '1' : '', '']]) {
+      if (value === fallback) url.searchParams.delete(key); else url.searchParams.set(key, value);
     }
-}
-
-// Function to render restaurant cards - showing only summary
-function renderRestaurantCards() {
-    const grid = document.querySelector('.restaurant-grid');
-    grid.innerHTML = '';
-    
-    Object.entries(restaurantData).forEach(([id, restaurant]) => {
-        const card = document.createElement('div');
-        card.className = 'restaurant-card';
-        card.dataset.restaurantId = id;
-        card.onclick = () => showDetails(id);
-        
-        card.innerHTML = `
-            <h2>${restaurant.name}</h2>
-            <p class="style">${restaurant.style}</p>
-            <p class="corkage">${restaurant.corkageFeeSummary}</p>
-        `;
-        
-        grid.appendChild(card);
-    });
-}
-
-// Setup filter buttons
-function setupFilters() {
-    // Setup button filters
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            e.target.classList.add('active');
-            filterRestaurants(e.target.dataset.area);
-        });
-    });
-
-    // Setup dropdown filter
-    const dropdown = document.querySelector('.filter-dropdown');
-    dropdown.addEventListener('change', (e) => {
-        filterRestaurants(e.target.value);
-    });
-}
-
-// Filter restaurants based on selected area
-function filterRestaurants(selectedArea) {
-    const cards = document.querySelectorAll('.restaurant-card');
-    
-    cards.forEach(card => {
-        const restaurantId = card.dataset.restaurantId;
-        const restaurant = restaurantData[restaurantId];
-        
-        if (selectedArea === 'all' || restaurant.area === selectedArea) {
-            card.style.display = '';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-// Initialize the page
-document.addEventListener('DOMContentLoaded', fetchData);
-
-// Show details modal - showing only detail
-function showDetails(restaurantId) {
-    const restaurant = restaurantData[restaurantId];
-    const modal = document.getElementById('restaurantDetails');
-    const content = document.getElementById('modalContent');
-    
-    content.innerHTML = `
-        <h2>${restaurant.name}</h2>
-        <div class="restaurant-details">
-            <span class="detail-label">Area:</span>
-            <span>${restaurant.area}</span>
-            
-            <span class="detail-label">Corkage:</span>
-            <span>${restaurant.corkageFeeDetail}</span>
-            
-            <span class="detail-label">Address:</span>
-            <span>${restaurant.address}</span>
-            
-            <span class="detail-label">Postcode:</span>
-            <span>${restaurant.postcode}</span>
-            
-            <span class="detail-label">Contact:</span>
-            <span>${restaurant.contact}</span>
-            
-            <span class="detail-label">Style:</span>
-            <span>${restaurant.style}</span>
-            
-            <span class="detail-label">Website:</span>
-            <span><a href="https://${restaurant.website}" target="_blank">${restaurant.website}</a></span>
-        </div>
-    `;
-    
-    modal.style.display = 'block';
-}
-
-// Modal functions
-function closeDetails() {
-    document.getElementById('restaurantDetails').style.display = 'none';
-}
-
-function openSuggestionModal() {
-    document.getElementById('suggestionModal').style.display = 'block';
-}
-
-function closeSuggestionModal() {
-    document.getElementById('suggestionModal').style.display = 'none';
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const detailsModal = document.getElementById('restaurantDetails');
-    const suggestionModal = document.getElementById('suggestionModal');
-    if (event.target === detailsModal || event.target === suggestionModal) {
-        detailsModal.style.display = 'none';
-        suggestionModal.style.display = 'none';
-    }
-}
-
-// Expose functions to window object for HTML onclick attributes
-window.showDetails = showDetails;
-window.closeDetails = closeDetails;
-window.openSuggestionModal = openSuggestionModal;
-window.closeSuggestionModal = closeSuggestionModal;
-
-// Form submission handler
-document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
-    
-    // Add form submission handler
-    document.getElementById('suggestionForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const restaurantName = document.getElementById('restaurantName').value;
-        let website = document.getElementById('website').value;
-        const corkage = document.getElementById('corkage').value;
-        
-        // Add https:// if no protocol is specified
-        if (website && !website.startsWith('http://') && !website.startsWith('https://')) {
-            website = 'https://' + website;
-        }
-        
-        // Create form data
-        const formData = new FormData();
-        formData.append('entry.648641937', restaurantName);
-        formData.append('entry.1146551704', website);
-        formData.append('entry.401103829', corkage);
-        
-        // Submit to Google Form
-        fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCTlbrDc3I1dgKsh0318ZYgo0CrjSVevpBZJhyBJZzJYbpGw/formResponse', {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors'
-        })
-        .then(response => {
-            // Clear form
-            document.getElementById('suggestionForm').reset();
-            
-            // Close modal
-            closeSuggestionModal();
-            
-            // Show success message
-            alert('Thank you for your suggestion!');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting your suggestion. Please try again.');
-        });
-    });
-});
-
-// Add event listener for ESC key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const detailsModal = document.getElementById('restaurantDetails');
-        const suggestionModal = document.getElementById('suggestionModal');
-        
-        // Close any open modal
-        if (detailsModal) detailsModal.style.display = 'none';
-        if (suggestionModal) suggestionModal.style.display = 'none';
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Existing filter functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const filterDropdown = document.querySelector('.filter-dropdown');
-    const restaurantCards = document.querySelectorAll('.restaurant-card');
-    
-    function filterRestaurants(location) {
-        restaurantCards.forEach(card => {
-            if (location === 'all' || card.dataset.location === location) {
-                card.style.display = 'flex';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            filterRestaurants(btn.dataset.location);
-        });
-    });
-
-    filterDropdown.addEventListener('change', (e) => {
-        filterRestaurants(e.target.value);
-    });
-
-    // View toggle functionality
-    const viewBtns = document.querySelectorAll('.view-btn');
-    const restaurantGrid = document.querySelector('.restaurant-grid');
-    
-    if (viewBtns.length > 0 && restaurantGrid) {
-        // Function to set view
-        function setView(viewType) {
-            viewBtns.forEach(b => b.classList.remove('active'));
-            const activeBtn = document.querySelector(`[data-view="${viewType}"]`);
-            if (activeBtn) activeBtn.classList.add('active');
-            
-            if (viewType === 'list') {
-                restaurantGrid.classList.add('list-view');
-            } else {
-                restaurantGrid.classList.remove('list-view');
-            }
-            
-            localStorage.setItem('viewPreference', viewType);
-        }
-
-        // Add click handlers
-        viewBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                setView(btn.dataset.view);
-            });
-        });
-        
-        // Set initial view based on screen size or saved preference
-        const savedView = localStorage.getItem('viewPreference');
-        if (window.innerWidth <= 768) {
-            setView('list');
-        } else if (savedView) {
-            setView(savedView);
-        }
-
-        // Update view on resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 768) {
-                setView('list');
-            }
-        });
-    }
-});
+    if (restaurant) url.searchParams.set('restaurant', restaurant); else url.searchParams.delete('restaurant');
+    history.replaceState(null, '', url);
+  }
+  function render() {
+    const query = normalise(fields.search.value.trim());
+    const matches = records.filter(r => (fields.area.value === 'all' || r.area === fields.area.value) && (fields.scope.value === 'all' || r.scope === fields.scope.value) && (!fields.free.checked || Boolean(r.freeOffer)) && normalise([r.name, r.neighbourhood, r.cuisine].join(' ')).includes(query));
+    matches.sort((a, b) => (fields.sort.value === 'area' ? a.area.localeCompare(b.area) : 0) || a.name.localeCompare(b.name, 'en'));
+    const positions = new Map(matches.map((r, i) => [r.id, i]));
+    const cards = [...grid.children].sort((a, b) => (positions.get(a.dataset.id) ?? Infinity) - (positions.get(b.dataset.id) ?? Infinity));
+    for (const card of cards) { card.hidden = !positions.has(card.dataset.id); grid.append(card); }
+    document.querySelector('#result-count').textContent = `${matches.length} ${matches.length === 1 ? 'restaurant' : 'restaurants'} · ${fields.scope.value === 'all' ? 'all arrangements' : labels[fields.scope.value].toLowerCase()}`;
+    document.querySelector('#empty').hidden = matches.length > 0;
+    document.querySelector('#scope-note').textContent = fields.scope.value === 'public' ? 'Public dining includes day-specific offers and conditions. See each policy before booking.' : 'Special arrangements are not general BYO permission. Check the scope and contact the restaurant before bringing wine.';
+    updateURL(dialog.open ? dialog.dataset.restaurant : null);
+  }
+  function openRestaurant(id, opener) {
+    const r = records.find(item => item.id === id);
+    if (!r) return;
+    lastOpener = opener || document.querySelector('#search');
+    content.innerHTML = `<p class="eyebrow">${escape(r.neighbourhood)} · ${escape(r.area)} London</p><h2 id="detail-title">${escape(r.name)}</h2><p class="cuisine">${escape(r.cuisine)}</p><span class="status ${r.scope === 'public' ? '' : 'special'}">${escape(labels[r.scope])}</span><p class="detail-fee">${escape(r.fee)}</p><div class="detail-policy"><p>${escape(r.policy)}</p></div><div class="detail-source"><a class="button small" href="${safeLink(r.website)}" target="_blank" rel="noopener noreferrer">Restaurant website ↗</a><a class="text-link" href="${safeLink(r.source)}" target="_blank" rel="noopener noreferrer">Read the official policy source ↗</a><span>Source checked 13 September 2026</span></div><p class="small-note">Website evidence, not a personal confirmation. Source links may open a PDF. Rates and availability can change; agree the full charge before your visit.</p><section class="detail-section"><h3>A bottle to consider</h3>${r.pairings.length ? `<ul>${r.pairings.map(p => `<li>${escape(p)}</li>`).join('')}</ul><p class="small-note">Editorial wine-style suggestions, conditional on the menu you choose. Not restaurant recommendations or merchant stock.</p>` : '<p>We have not verified enough menu detail to suggest a pairing. Ask the restaurant about the current food before choosing your bottle.</p>'}</section><section class="detail-section"><h3>Wine shops to plan around</h3><p class="small-note">Wider-area options, not a nearest-shop ranking. Some require a separate journey. Check current hours, branch stock and collection before travelling.</p><ul class="merchant-list">${r.merchants.map(m => `<li><a href="${safeLink(m.url)}" target="_blank" rel="noopener noreferrer">${escape(m.name)} ↗</a><br>${escape(m.address)}</li>`).join('')}</ul></section><section class="detail-section"><a class="text-link" href="policies.html#${escape(r.id)}">Open the text policy listing →</a></section>`;
+    dialog.dataset.restaurant = id;
+    if (!dialog.open) dialog.showModal();
+    document.body.classList.add('dialog-open');
+    dialog.scrollTop = 0;
+    updateURL(id);
+  }
+  dialog.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) { const rect = dialog.getBoundingClientRect(); if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) dialog.close(); } });
+  dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); updateURL(); if (lastOpener?.isConnected && !lastOpener.closest('[hidden]')) lastOpener.focus({ preventScroll: true }); });
+  grid.addEventListener('click', e => { const button = e.target.closest('[data-restaurant]'); if (button) openRestaurant(button.dataset.restaurant, button); });
+  form.addEventListener('submit', e => e.preventDefault());
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  form.addEventListener('reset', () => setTimeout(render, 0));
+  document.querySelector('#clear-search').addEventListener('click', () => { form.reset(); fields.search.focus(); });
+  function readURL() {
+    const params = new URLSearchParams(location.search);
+    fields.search.value = params.get('q') || '';
+    for (const [key, fallback] of [['area', 'all'], ['scope', 'public'], ['sort', 'name']]) fields[key].value = [...fields[key].options].some(o => o.value === params.get(key)) ? params.get(key) : fallback;
+    fields.free.checked = params.get('free') === '1';
+    const id = params.get('restaurant');
+    render();
+    if (id) openRestaurant(id);
+  }
+  fetch('data.json').then(response => { if (!response.ok) throw new Error('Data unavailable'); return response.json(); }).then(data => {
+    if (!Array.isArray(data) || data.length !== 42) throw new Error('Invalid directory');
+    records = data;
+    for (const button of grid.querySelectorAll('button')) button.disabled = false;
+    readURL();
+    document.documentElement.dataset.directoryReady = 'true';
+    window.addEventListener('popstate', readURL);
+  }).catch(() => {
+    document.querySelector('#result-count').textContent = 'Interactive details could not load. Use the complete text policy list below.';
+    form.hidden = true;
+    for (const card of grid.children) card.hidden = false;
+    document.querySelector('#scope-note').textContent = 'All arrangements shown below. Special-scope listings are not general BYO permission.';
+    const fallback = document.createElement('p'); fallback.innerHTML = '<a class="button" href="policies.html">Read all restaurant policies →</a>'; grid.before(fallback);
+    for (const button of grid.querySelectorAll('button')) { const link = document.createElement('a'); link.href = `policies.html#${button.dataset.restaurant}`; link.className = 'card-open'; link.textContent = button.textContent; button.replaceWith(link); }
+  });
+})();

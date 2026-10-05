@@ -1,211 +1,1208 @@
-{
-    "hawksmoor": {
-        "name": "Hawksmoor",
-        "area": "Multiple Locations",
-        "corkageFeeSummary": "£5 Mondays",
-        "corkageFeeDetail": "£5 on Mondays, £25 Tuesday - Sunday",
-        "address": "Several locations in London: Piccadilly Circus, London Bridge, Bank, Shoredich, South Kensington, Covent Garden, Canary Wharf",
-        "postcode": "-",
-        "contact": "-",
-        "style": "Steak",
-        "website": "thehawksmoor.com"
-    },
-    "tayyabs": {
-        "name": "Tayyabs",
-        "area": "East London",
-        "corkageFeeSummary": "Free",
-        "corkageFeeDetail": "Free every day",
-        "address": "83-89 Fieldgate Street",
-        "postcode": "E1 1JU",
-        "contact": "020 7247 9543",
-        "style": "Indian",
-        "website": "tayyabs.co.uk"
-    },
-    "kitchenw8": {
-        "name": "Kitchen W8",
-        "area": "West London",
-        "corkageFeeSummary": "Free Sundays",
-        "corkageFeeDetail": "Free on Sundays evenings",
-        "address": "11-13 Abingdon Road",
-        "postcode": "W8 6AH",
-        "contact": "020 7937 0120",
-        "style": "Modern European",
-        "website": "kitchenw8.com"
-    },
-    "cabotte": {
-        "name": "Cabotte",
-        "area": "City",
-        "corkageFeeSummary": "From £25",
-        "corkageFeeDetail": "Free on Mondays. £25 per bottle, £50 per Magnum and £75 for a Jeroboam",
-        "address": "48 Gresham Street",
-        "postcode": "EC2V 7AY",
-        "contact": "020 7600 1616",
-        "style": "Modern French",
-        "website": "cabotte.co.uk"
-    },
-    "parsons": {
-        "name": "Parsons",
-        "area": "Central London",
-        "corkageFeeSummary": "£25",
-        "corkageFeeDetail": "£25 per bottle",
-        "address": "39 Endell Street",
-        "postcode": "WC2H 9BA",
-        "contact": "020 3422 0221",
-        "style": "Seafood",
-        "website": "thebirdinhandlondon.com"
-    },
-    "ledbury": {
-        "name": "Ledbury",
-        "area": "West London",
-        "corkageFeeSummary": "£75",
-        "corkageFeeDetail": "£75 per bottle",
-        "address": "127 Ledbury Road",
-        "postcode": "W11 2AQ",
-        "contact": "020 7792 9090",
-        "style": "3 Michelin stars restaurant. Modern cuisine",
-        "website": "theledbury.com"
-    },
-    "medlar": {
-        "name": "Medlar",
-        "area": "West London",
-        "corkageFeeSummary": "£15-30",
-        "corkageFeeDetail": "£15 at Lunch, £30 at Dinner",
-        "address": "438 King's Rd, Chelsea",
-        "postcode": "SW10 0LJ",
-        "contact": "020 7349 1900",
-        "style": "High-end, Modern French food with global influences",
-        "website": "medlarrestaurant.co.uk"
-    },
-    "cloveclub": {
-        "name": "The Clove Club",
-        "area": "East London",
-        "corkageFeeSummary": "£75",
-        "corkageFeeDetail": "£75 per bottle - one per two guests permitted",
-        "address": "Shoreditch Town Hall, 380 Old St",
-        "postcode": "EC1V 9LT",
-        "contact": "020 7729 6496",
-        "style": "Cutting-edge restaurant and bar for innovative British menu",
-        "website": "thecloveclub.com"
-    },
-    "luca": {
-        "name": "Luca",
-        "area": "East London",
-        "corkageFeeSummary": "£50",
-        "corkageFeeDetail": "£50 per bottle, for a maximum of two bottles",
-        "address": "88 St John St, Clerkenwell",
-        "postcode": "EC1M 4EH",
-        "contact": "020 3859 3000",
-        "style": "British seasonal ingredients through an italian lens",
-        "website": "luca.restaurant"
-    },
-    "noblerotsoho": {
-        "name": "Noble Rot Soho",
-        "area": "Central London",
-        "corkageFeeSummary": "£25",
-        "corkageFeeDetail": "£25 per bottle & £50 per Magnum",
-        "address": "2 Greek Street",
-        "postcode": "W1D 4NB",
-        "contact": "020 7183 8190",
-        "style": "Modern European",
-        "website": "noblerot.co.uk"
-    },
-    "noblerotmayfair": {
-        "name": "Noble Rot Mayfair",
-        "area": "Central London",
-        "corkageFeeSummary": "£25",
-        "corkageFeeDetail": "£25 per bottle & £50 per Magnum",
-        "address": "5 Trebeck St, Shepherd Market",
-        "postcode": "W1J 7LT",
-        "contact": "020 7499 8597",
-        "style": "Modern European",
-        "website": "noblerot.co.uk"
-    },
-    "trinity": {
-        "name": "Trinity",
-        "area": "South London",
-        "corkageFeeSummary": "£35-40",
-        "corkageFeeDetail": "£35 for wine and £40 for sparkling",
-        "address": "4 The Polygon",
-        "postcode": "SW4 0JG",
-        "contact": "020 7622 1199",
-        "style": "Modern Cuisine",
-        "website": "trinityrestaurant.co.uk"
-    },
-    "bandol": {
-        "name": "Bandol",
-        "area": "West London",
-        "corkageFeeSummary": "£25",
-        "corkageFeeDetail": "£25 per bottle",
-        "address": "6 Hollywood Rd, Kensington",
-        "postcode": "SW10 9HU",
-        "contact": "0207 351 1322",
-        "style": "Elegant restaurant showcasing the flavours & style of the South of France",
-        "website": "barbandol.co.uk"
-    },
-    "quovadis": {
-        "name": "Quo Vadis",
-        "area": "Central London",
-        "corkageFeeSummary": "£30-50",
-        "corkageFeeDetail": "£30 per bottle, £50 per bottle of Champagne",
-        "address": "28-29 Dean St, Soho",
-        "postcode": "W1D 3LL",
-        "contact": "0207 440 1450",
-        "style": "Modern British cuisine",
-        "website": "quovadissoho.co.uk"
-    },
-    "lorne": {
-        "name": "Lorne",
-        "area": "Central London",
-        "corkageFeeSummary": "£40",
-        "corkageFeeDetail": "£40 per bottle",
-        "address": "76 Wilton Road",
-        "postcode": "SW1V 1DE",
-        "contact": "020 3327 0210",
-        "style": "Modern British",
-        "website": "lornerestaurant.co.uk"
-    },
-    "taillevent": {
-        "name": "110 de Taillevent",
-        "area": "Central London",
-        "corkageFeeSummary": "£50",
-        "corkageFeeDetail": "£50 per bottle & per table",
-        "address": "16 Cavendish Square, Marylebone",
-        "postcode": "W1G 9DD",
-        "contact": "020 314 16016",
-        "style": "Classic upmarket French bistro",
-        "website": "les-110-taillevent-london.com"
-    },
-    "latrompette": {
-        "name": "La Trompette",
-        "area": "West London",
-        "corkageFeeSummary": "£40",
-        "corkageFeeDetail": "£40 per bottle - max of four bottles or two magnums per table",
-        "address": "3-7 Devonshire Road",
-        "postcode": "W4 2EU",
-        "contact": "020 8747 1836",
-        "style": "High-end french cuisine",
-        "website": "latrompette.co.uk"
-    },
-    "chezbruce": {
-        "name": "Chez Bruce",
-        "area": "South London",
-        "corkageFeeSummary": "£40",
-        "corkageFeeDetail": "£40 per bottle - max of four bottles or two magnums per table",
-        "address": "2 Bellevue Road, Wandsworth Common",
-        "postcode": "SW17 7EG",
-        "contact": "020 8672 0114",
-        "style": "High-end french cuisine",
-        "website": "chezbruce.co.uk"
-    },
-    "mountain": {
-        "name": "Mountain",
-        "area": "Central London",
-        "corkageFeeSummary": "£30",
-        "corkageFeeDetail": "£30 per bottle",
-        "address": "16-18 Beak Street, Soho",
-        "postcode": "W1F 9RD",
-        "contact": "bookings@mountainbeakstreet.com",
-        "style": "Basque-inspired, wood-fired cooking, 1 Michelin star",
-        "website": "mountainbeakstreet.com"
-    }
-} 
+[
+  {
+    "id": "noble-rot-soho",
+    "website": "https://noblerot.co.uk/restaurant/soho",
+    "name": "Noble Rot Soho",
+    "neighbourhood": "Soho",
+    "area": "Central",
+    "cuisine": "French & European",
+    "fee": "£35 per 750ml",
+    "scope": "public",
+    "policy": "Let the restaurant know in advance. No bottle limit or magnum price established in the published FAQ.",
+    "source": "https://noblerot.co.uk/faq",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "noble-rot-mayfair",
+    "website": "https://noblerot.co.uk/restaurant/mayfair",
+    "name": "Noble Rot Mayfair",
+    "neighbourhood": "Mayfair",
+    "area": "Central",
+    "cuisine": "French & European",
+    "fee": "£35 per 750ml",
+    "scope": "public",
+    "policy": "Let the restaurant know in advance. No separate magnum charge established.",
+    "source": "https://noblerot.co.uk/faq",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "noble-rot-lambs-conduit",
+    "website": "https://noblerot.co.uk/restaurant/lambs-conduit",
+    "name": "Noble Rot Lamb’s Conduit",
+    "neighbourhood": "Bloomsbury",
+    "area": "Central",
+    "cuisine": "French & European",
+    "fee": "£35 per 750ml",
+    "scope": "public",
+    "policy": "Let the restaurant know in advance. The group FAQ applies; bottle limits are not specified.",
+    "source": "https://noblerot.co.uk/faq",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "kitchen-w8",
+    "website": "https://www.kitchenw8.com/",
+    "name": "Kitchen W8",
+    "neighbourhood": "Kensington",
+    "area": "West",
+    "cuisine": "Modern European",
+    "fee": "£30 · free Sunday evening",
+    "scope": "public",
+    "policy": "One bottle per two guests, maximum four per booking. No Saturday evening corkage. Sunday evening is free except special events, Valentine’s Day and New Year’s Eve. Discuss bottles and glassware when booking.",
+    "source": "https://www.kitchenw8.com/wine/",
+    "checked": "2026-09-13",
+    "freeOffer": "Sunday evening",
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "The Good Wine Shop",
+        "address": "84 Chiswick High Road, Chiswick",
+        "url": "https://www.thegoodwineshop.co.uk/pages/chiswick"
+      }
+    ]
+  },
+  {
+    "id": "medlar",
+    "website": "https://www.medlarrestaurant.co.uk/",
+    "name": "Medlar",
+    "neighbourhood": "Chelsea",
+    "area": "West",
+    "cuisine": "French & European",
+    "fee": "£20 lunch / £40 dinner",
+    "scope": "public",
+    "policy": "Rates per 75cl bottle. No bottle limit; email in advance. Larger formats and sparkling terms should be checked separately.",
+    "source": "https://www.medlarrestaurant.co.uk/wine",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "The Good Wine Shop",
+        "address": "84 Chiswick High Road, Chiswick",
+        "url": "https://www.thegoodwineshop.co.uk/pages/chiswick"
+      }
+    ]
+  },
+  {
+    "id": "la-trompette",
+    "website": "https://www.latrompette.co.uk/",
+    "name": "La Trompette",
+    "neighbourhood": "Chiswick",
+    "area": "West",
+    "cuisine": "French & European",
+    "fee": "£25 lunch / £50 dinner",
+    "scope": "public",
+    "policy": "Rates per 75cl. Maximum four standard bottles or two magnums per table. Optional 12.5% service is additional. Tell the restaurant when booking; ask for magnum pricing.",
+    "source": "https://www.latrompette.co.uk/wine/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "The Good Wine Shop",
+        "address": "84 Chiswick High Road, Chiswick",
+        "url": "https://www.thegoodwineshop.co.uk/pages/chiswick"
+      }
+    ]
+  },
+  {
+    "id": "maison-francois",
+    "website": "https://www.maisonfrancois.london/",
+    "name": "Maison François",
+    "neighbourhood": "St James’s",
+    "area": "Central",
+    "cuisine": "French brasserie",
+    "fee": "Free Sunday dinner",
+    "scope": "public",
+    "policy": "Published offer applies to Sunday dinner reservations from 16:00. Other services, bottle sizes and limits are not established. Confirm the offer when booking.",
+    "source": "https://www.maisonfrancois.london/",
+    "checked": "2026-09-13",
+    "freeOffer": "Sunday dinner",
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "pied-a-terre",
+    "website": "https://www.pied-a-terre.co.uk/",
+    "name": "Pied à Terre",
+    "neighbourhood": "Fitzrovia",
+    "area": "Central",
+    "cuisine": "French fine dining",
+    "fee": "£55 wine / £80 sparkling",
+    "scope": "public",
+    "policy": "Wine rate is per 75cl. Maximum two bottles per table, with an expectation to purchase from the wine list. Unavailable on special occasions such as Valentine’s Day. Agree the arrangement before your visit.",
+    "source": "https://www.pied-a-terre.co.uk/food-and-drink",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "trishna",
+    "website": "https://www.trishnalondon.com/",
+    "name": "Trishna",
+    "neighbourhood": "Marylebone",
+    "area": "Central",
+    "cuisine": "Indian coastal cooking",
+    "fee": "£40 per 75cl",
+    "scope": "public",
+    "policy": "Maximum two bottles per reservation. Corkage is not available in the private dining room. Policy source is a May 2025 FAQ; reconfirm when booking.",
+    "source": "https://www.trishnalondon.com/wp-content/uploads/2025/05/May-2025-Trishna-FAQ.pdf",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Off-dry Riesling for spice and chilli.",
+      "Dry sparkling rosé for rich, mixed plates."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "fallow",
+    "website": "https://fallowrestaurant.com/",
+    "name": "Fallow",
+    "neighbourhood": "St James’s",
+    "area": "Central",
+    "cuisine": "Modern British",
+    "fee": "£50 still / £90 sparkling",
+    "scope": "public",
+    "policy": "Rates per 75cl, only for wines absent from the restaurant’s list. Important: premium fine wines are charged at 50% of average value, at management discretion. Management may refuse corkage. Agree the exact fee before booking.",
+    "source": "https://fallowrestaurant.com/faq/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "the-harwood-arms",
+    "website": "https://harwoodarms.com/",
+    "name": "The Harwood Arms",
+    "neighbourhood": "Fulham",
+    "area": "West",
+    "cuisine": "British gastropub",
+    "fee": "£40 · free Friday lunch",
+    "scope": "public",
+    "policy": "£40 per 75cl, one bottle per person. Friday lunch corkage is free except in December. Confirm availability and any additional terms before booking.",
+    "source": "https://harwoodarms.com/",
+    "checked": "2026-09-13",
+    "freeOffer": "Friday lunch",
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "The Good Wine Shop",
+        "address": "84 Chiswick High Road, Chiswick",
+        "url": "https://www.thegoodwineshop.co.uk/pages/chiswick"
+      }
+    ]
+  },
+  {
+    "id": "hawksmoor-borough",
+    "website": "https://thehawksmoor.com/locations/borough/",
+    "name": "Hawksmoor Borough",
+    "neighbourhood": "Borough",
+    "area": "South",
+    "cuisine": "Steak & seafood",
+    "fee": "£5 Monday / £25 other days",
+    "scope": "public",
+    "policy": "Monday offer applies all day. Group policy states £25 per cork Tuesday to Sunday, any wine style or bottle size. This listing is the Borough branch, not a count of every London Hawksmoor.",
+    "source": "https://thehawksmoor.com/wine-club/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Mature Cabernet-led Bordeaux for beef.",
+      "Saline Chardonnay for seafood."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "tayyabs",
+    "website": "https://www.tayyabs.co.uk/",
+    "name": "Tayyabs",
+    "neighbourhood": "Whitechapel",
+    "area": "East",
+    "cuisine": "Punjabi",
+    "fee": "BYO welcome · fee unknown",
+    "scope": "public",
+    "policy": "The official site explicitly welcomes guests to bring a bottle. A current fee, bottle limit and size allowance were not published in the material checked. Do not assume corkage is free.",
+    "source": "https://www.tayyabs.co.uk/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Off-dry Riesling for chilli and spice.",
+      "Low-tannin Gamay for grilled lamb."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "cabotte",
+    "website": "https://www.cabotte.co.uk/",
+    "name": "Cabotte",
+    "neighbourhood": "City",
+    "area": "City",
+    "cuisine": "French",
+    "fee": "Friday: first bottle free",
+    "scope": "public",
+    "policy": "Official post dated 30 May 2025 says you and a guest can enjoy a first bottle corkage-free on Fridays, with a second bottle at £30. This is a dated promotion: confirm it is still running. Other-day fees and bottle limits are not established.",
+    "source": "https://www.cabotte.co.uk/blog/2025/5/30/enjoy-byo-fridays-in-the-heart-of-the-city",
+    "checked": "2026-09-13",
+    "freeOffer": "Friday, first bottle",
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Amathus",
+        "address": "17–19 Leadenhall Market",
+        "url": "https://www.amathusdrinks.com/city-store"
+      }
+    ]
+  },
+  {
+    "id": "the-clove-club",
+    "website": "https://www.thecloveclub.com/",
+    "name": "The Clove Club",
+    "neighbourhood": "Shoreditch",
+    "area": "East",
+    "cuisine": "Modern British",
+    "fee": "£75 per bottle",
+    "scope": "public",
+    "policy": "One bottle of wine per two guests. Service charge is additional. Bottle format is not specified in the published clause; confirm before bringing a larger bottle.",
+    "source": "https://www.thecloveclub.com/faq",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "luca",
+    "website": "https://luca.restaurant/",
+    "name": "Luca",
+    "neighbourhood": "Clerkenwell",
+    "area": "Central",
+    "cuisine": "Italian",
+    "fee": "£50 per bottle",
+    "scope": "public",
+    "policy": "Maximum two bottles. The official site footer states the policy. Bottle format, service-charge treatment and any day restrictions should be confirmed.",
+    "source": "https://luca.restaurant/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Verdicchio for seafood or vegetables.",
+      "Sangiovese for tomato sauces and meat."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "trinity",
+    "website": "https://trinityrestaurant.co.uk/",
+    "name": "Trinity",
+    "neighbourhood": "Clapham",
+    "area": "South",
+    "cuisine": "Seasonal modern cooking",
+    "fee": "£40 still · free Sunday evening",
+    "scope": "public",
+    "policy": "Downstairs only: £20/375ml; £40 still/750ml; £70 still magnum; £50 Champagne/750ml; £90 Champagne magnum. Fees waived Sunday evenings. One bottle per two guests; no wines already on the list; notify when confirming. Service is additional. No corkage Upstairs at Trinity.",
+    "source": "https://trinityrestaurant.co.uk/wp-content/uploads/2026/01/Corkage-Policy-for-2026.pdf.pdf",
+    "checked": "2026-09-13",
+    "freeOffer": "Sunday evening",
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "chez-bruce",
+    "website": "https://www.chezbruce.co.uk/",
+    "name": "Chez Bruce",
+    "neighbourhood": "Wandsworth Common",
+    "area": "South",
+    "cuisine": "French & Mediterranean",
+    "fee": "£25 lunch / £50 dinner",
+    "scope": "public",
+    "policy": "Per 75cl bottle, one per guest and maximum four per table. Optional 12.5% service is additional. Notify the restaurant when booking if possible. No free-Sunday offer verified.",
+    "source": "https://www.chezbruce.co.uk/wine/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "da-terra",
+    "website": "https://www.daterra.co.uk/",
+    "name": "Da Terra",
+    "neighbourhood": "Bethnal Green",
+    "area": "East",
+    "cuisine": "Brazilian & Italian influences",
+    "fee": "£70 per 750ml",
+    "scope": "public",
+    "policy": "£40 per 375ml bottle. The FAQ does not state a bottle cap or service-charge treatment; check with the restaurant.",
+    "source": "https://www.daterra.co.uk/faq/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Verdicchio for seafood or vegetables.",
+      "Sangiovese for tomato sauces and meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "sune",
+    "website": "https://www.sune.restaurant/",
+    "name": "Sune",
+    "neighbourhood": "Broadway Market",
+    "area": "East",
+    "cuisine": "Menu to check with restaurant",
+    "fee": "£35 still / £45 sparkling",
+    "scope": "public",
+    "policy": "£65 per magnum. Special bottles are welcome; no bottle cap is published in the policy checked. General discretionary service is 13.5%; ask how this applies to corkage.",
+    "source": "https://www.sune.restaurant/needtoknow",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "restaurant-story",
+    "website": "https://restaurantstory.co.uk/",
+    "name": "Restaurant Story",
+    "neighbourhood": "London Bridge",
+    "area": "South",
+    "cuisine": "British tasting menu",
+    "fee": "£65 per 750ml",
+    "scope": "public",
+    "policy": "One bottle per two guests. Service-charge treatment is not stated in the published clause. Confirm the policy with your reservation.",
+    "source": "https://restaurantstory.co.uk/useful-information/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "the-french-table",
+    "website": "https://www.thefrenchtable.co.uk/",
+    "name": "The French Table",
+    "neighbourhood": "Surbiton",
+    "area": "South",
+    "cuisine": "Contemporary French",
+    "fee": "£30 still / £40 sparkling",
+    "scope": "public",
+    "policy": "Standard 75cl bottles; magnums £60. Maximum two standard bottles or one magnum per reservation regardless of party size. 12.5% service is additional. Mention corkage when booking; check sparkling-magnum terms.",
+    "source": "https://www.thefrenchtable.co.uk/wine",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "noize",
+    "website": "https://www.noize-restaurant.co.uk/",
+    "name": "Noizé",
+    "neighbourhood": "Fitzrovia",
+    "area": "Central",
+    "cuisine": "French bistro",
+    "fee": "BYO welcome · ask for fee",
+    "scope": "public",
+    "policy": "The official site encourages bringing wine for a small corkage fee, but the current amount, bottle cap and day restrictions were not established. Ask before booking; older third-party prices are not used here.",
+    "source": "https://www.noize-restaurant.co.uk/about",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "the-ninth",
+    "website": "https://theninthlondon.com/",
+    "name": "The Ninth",
+    "neighbourhood": "Fitzrovia",
+    "area": "Central",
+    "cuisine": "French & Mediterranean",
+    "fee": "Free corkage on Monday",
+    "scope": "public",
+    "policy": "Up to one bottle per person, maximum six bottles. Bottle size is unspecified. This is the published Monday offer; other-day fees are not officially verified. Reconfirm the offer with your reservation.",
+    "source": "https://theninthlondon.com/news-recipes/",
+    "checked": "2026-09-13",
+    "freeOffer": "Monday",
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "cornus",
+    "website": "https://cornusrestaurant.co.uk/",
+    "name": "Cornus",
+    "neighbourhood": "Belgravia",
+    "area": "Central",
+    "cuisine": "Modern European",
+    "fee": "£20 lunch / £40 dinner",
+    "scope": "public",
+    "policy": "Per 75cl bottle. No bottle limit, but the restaurant asks to know in advance. Larger-format and sparkling rates are not separately stated.",
+    "source": "https://cornusrestaurant.co.uk/wine/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "a-wong",
+    "website": "https://www.awong.co.uk/",
+    "name": "A. Wong",
+    "neighbourhood": "Victoria",
+    "area": "Central",
+    "cuisine": "Chinese",
+    "fee": "£80 · bottle size to clarify",
+    "scope": "public",
+    "policy": "For a special bottle not available on the wine list. The FAQ literally states £80 per 70cl bottle and £160 per magnum. Confirm the unusual 70cl wording and your bottle’s fee with the restaurant. Bottle cap and day exclusions are not stated.",
+    "source": "https://www.awong.co.uk/faq/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Off-dry Riesling for aromatic spice and heat.",
+      "Blanc de blancs Champagne for delicate dim sum."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "galvin-la-chapelle",
+    "website": "https://galvinrestaurants.com/",
+    "name": "Galvin La Chapelle",
+    "neighbourhood": "Spitalfields",
+    "area": "East",
+    "cuisine": "Mediterranean",
+    "fee": "£65 · agree exact fee ahead",
+    "scope": "public",
+    "policy": "One bottle of wine or Champagne per reservation. Fee may vary by wine and bottle size. Main dining room only, not private dining. Contact the restaurant in advance to agree the charge.",
+    "source": "https://galvinrestaurants.com/galvin-la-chapelle/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Vermentino for seafood and herb-led plates.",
+      "Sangiovese for tomato-led dishes and grilled meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "llewelyns",
+    "website": "https://www.llewelyns-restaurant.co.uk/",
+    "name": "Llewelyns",
+    "neighbourhood": "Herne Hill",
+    "area": "South",
+    "cuisine": "Seasonal European",
+    "fee": "£30 still / £40 sparkling",
+    "scope": "public",
+    "policy": "Per 75cl. No bottle cap, wine-list exclusion or day limitation stated in the booking policy checked. Confirm arrangements when booking.",
+    "source": "https://www.llewelyns-restaurant.co.uk/book",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "bistro-union",
+    "website": "https://bistrounion.co.uk/",
+    "name": "Bistro Union",
+    "neighbourhood": "Clapham",
+    "area": "South",
+    "cuisine": "British bistro",
+    "fee": "£35 still / £40 sparkling",
+    "scope": "public",
+    "policy": "Per 75cl. Maximum two bottles per table, not already on the wine list. Notify in advance. A separate policy adds discretionary 12.5% service to bills.",
+    "source": "https://bistrounion.co.uk/menus/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "the-laundry",
+    "website": "https://thelaundrybrixton.com/",
+    "name": "The Laundry",
+    "neighbourhood": "Brixton",
+    "area": "South",
+    "cuisine": "European bistro",
+    "fee": "£25 · free Tuesday",
+    "scope": "public",
+    "policy": "No corkage charge on Tuesdays. Groups of 12 or more can only bring wine on Tuesdays. Bottle-size/category limits are unspecified. Discretionary 12.5% service applies to bills. Reconfirm the offer when booking.",
+    "source": "https://thelaundrybrixton.com/frequently-asked-questions",
+    "checked": "2026-09-13",
+    "freeOffer": "Tuesday",
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "ploussard",
+    "website": "https://www.ploussardlondon.co.uk/",
+    "name": "Ploussard",
+    "neighbourhood": "Clapham Junction",
+    "area": "South",
+    "cuisine": "Modern French",
+    "fee": "£35 per bottle",
+    "scope": "public",
+    "policy": "Reservations must be for a full dining experience, not drinks or snacks only. Bottle format, category, cap and service-charge treatment are not stated in the FAQ.",
+    "source": "https://www.ploussardlondon.co.uk/faq",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "the-don",
+    "website": "https://thedonlondon.com/",
+    "name": "The Don",
+    "neighbourhood": "City",
+    "area": "City",
+    "cuisine": "Modern European",
+    "fee": "Free Monday evening",
+    "scope": "public",
+    "policy": "Maximum two bottles per table; restaurant bookings only. Published promotion refers to a relaxed evening, not Monday lunch or private events. Formats and categories are unspecified. Confirm the offer is running.",
+    "source": "https://thedonlondon.com/free-corkage-mondays/",
+    "checked": "2026-09-13",
+    "freeOffer": "Monday evening",
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Amathus",
+        "address": "17–19 Leadenhall Market",
+        "url": "https://www.amathusdrinks.com/city-store"
+      }
+    ]
+  },
+  {
+    "id": "morchella",
+    "website": "https://www.morchelladining.co.uk/",
+    "name": "Morchella",
+    "neighbourhood": "Clerkenwell",
+    "area": "Central",
+    "cuisine": "Mediterranean",
+    "fee": "£36 still / £51 sparkling or sweet",
+    "scope": "public",
+    "policy": "The FAQ does not specify a bottle size or quantity cap. Check both with the restaurant rather than assuming a 750ml allowance.",
+    "source": "https://www.morchelladining.co.uk/faqs",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Vermentino for seafood and herb-led plates.",
+      "Sangiovese for tomato-led dishes and grilled meat."
+    ],
+    "merchants": [
+      {
+        "name": "Berry Bros. & Rudd",
+        "address": "63 Pall Mall, St James’s",
+        "url": "https://www.bbr.com/our-shops/the-wine-shop"
+      },
+      {
+        "name": "Hedonism",
+        "address": "3–7 Davies Street, Mayfair",
+        "url": "https://hedonism.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "maai-by-nikita",
+    "website": "https://restaurantmaai.com/",
+    "name": "MAAI by Nikita",
+    "neighbourhood": "Clapham",
+    "area": "South",
+    "cuisine": "Modern British",
+    "fee": "£30 per bottle",
+    "scope": "public",
+    "policy": "One bottle per two people, maximum four per booking. No Saturday evening corkage. Bottle size, sparkling terms and advance-notice requirement are not stated.",
+    "source": "https://restaurantmaai.com/elementor-page-572/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "constance",
+    "website": "https://constancerestaurant.com/",
+    "name": "Constance",
+    "neighbourhood": "Fulham",
+    "area": "West",
+    "cuisine": "Modern British brasserie",
+    "fee": "£35 still / £40 sparkling",
+    "scope": "public",
+    "policy": "The public FAQ explicitly allows any number of bottles. Bottle size is unspecified. Normally closed Mondays except bank holidays; check matchday availability at Fulham Pier. Formerly Brasserie Constance.",
+    "source": "https://constancerestaurant.com/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Fresh Chardonnay for fish or creamy sauces.",
+      "Cabernet-led Bordeaux for beef or slow-cooked meat."
+    ],
+    "merchants": [
+      {
+        "name": "The Good Wine Shop",
+        "address": "84 Chiswick High Road, Chiswick",
+        "url": "https://www.thegoodwineshop.co.uk/pages/chiswick"
+      }
+    ]
+  },
+  {
+    "id": "brawn",
+    "website": "https://www.brawn.co/",
+    "name": "Brawn",
+    "neighbourhood": "Columbia Road",
+    "area": "East",
+    "cuisine": "Seasonal European",
+    "fee": "£30 · private hire only evidence",
+    "scope": "events",
+    "policy": "Evidence is a November 2024 private-hire brochure: semi-private lunches Tuesday–Friday, 10–20 guests, 12–4pm, £2,000 food/beverage minimum and 12.5% service. £30 per 75cl. Not verified for an ordinary dinner booking. Reconfirm event terms.",
+    "source": "https://www.brawn.co/wp-content/uploads/2024/11/A.C.T%5FBrawn%5FPrivate%5FHire%5FV6.pdf",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "95 Lauriston Road, Victoria Park Village",
+        "url": "https://www.bottleapostle.com/shops.html"
+      },
+      {
+        "name": "Shrine to the Vine",
+        "address": "27 Broadway Market",
+        "url": "https://shrinetothevine.co.uk/pages/london-wine-shops"
+      }
+    ]
+  },
+  {
+    "id": "brunswick-house",
+    "website": "https://brunswickhouse.london/",
+    "name": "Brunswick House",
+    "neighbourhood": "Vauxhall",
+    "area": "South",
+    "cuisine": "Seasonal cooking",
+    "fee": "£35 still / £40 sparkling · events",
+    "scope": "events",
+    "policy": "Official 2026 private-event pack only: rates per 75cl including VAT, wine only, for an arrival reception and meal. General restaurant BYO is not officially verified. Do not apply these rates to an ordinary booking.",
+    "source": "https://brunswickhouse.london/wp-content/uploads/2025/12/Private-Dining-Events-Info-Pack-2026.pdf",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Textured dry Chenin Blanc for vegetable or white-meat courses.",
+      "Elegant Pinot Noir for richer seasonal dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "cloth-fair",
+    "website": "https://www.clothrestaurants.com/cloth-restaurants-cloth-fair-london-reservations",
+    "name": "Cloth Fair",
+    "neighbourhood": "Smithfield",
+    "area": "City",
+    "cuisine": "British & French",
+    "fee": "£25 · group/event evidence only",
+    "scope": "events",
+    "policy": "£25 per 75cl in the group-booking, private-hire and event brochure. Application to ordinary small-table dining is not established. Confirm current terms with the events team.",
+    "source": "https://static1.squarespace.com/static/659c2c32d274403ce672b6eb/t/6890c9c3d88c3569e22cb6a6/1754319303019/Cloth%2BSpaces.pdf",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Restrained Chardonnay for butter-rich sauces and fish.",
+      "Mature Pinot Noir for poultry, mushrooms or lighter meat dishes."
+    ],
+    "merchants": [
+      {
+        "name": "Amathus",
+        "address": "17–19 Leadenhall Market",
+        "url": "https://www.amathusdrinks.com/city-store"
+      }
+    ]
+  },
+  {
+    "id": "trivet",
+    "website": "https://trivetrestaurant.co.uk/",
+    "name": "Trivet",
+    "neighbourhood": "Bermondsey",
+    "area": "South",
+    "cuisine": "Menu to check with restaurant",
+    "fee": "Members: free lunch corkage",
+    "scope": "members",
+    "policy": "Tasting Club members receive free lunchtime corkage, up to four bottles per table. Published annual membership is £240. General diner and dinner corkage policies are unknown. This is not a free public BYO offer.",
+    "source": "https://trivetrestaurant.co.uk/trivet-tasting-club/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "darbys",
+    "website": "https://www.darbys-london.com/",
+    "name": "Darby’s",
+    "neighbourhood": "Nine Elms",
+    "area": "South",
+    "cuisine": "Oysters & grill",
+    "fee": "£35 still / £45 sparkling · ask first",
+    "scope": "discretion",
+    "policy": "Per 75cl. All corkage arrangements, including the number of bottles permitted, are at management discretion. Agree in advance; no guaranteed allowance.",
+    "source": "https://www.darbys-london.com/darbysmenus",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Muscadet or Chablis for oysters.",
+      "Mature Cabernet blend for grilled meat."
+    ],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "petersham-nurseries-restaurant",
+    "website": "https://petershamnurseries.com/",
+    "name": "Petersham Nurseries Restaurant",
+    "neighbourhood": "Richmond",
+    "area": "South",
+    "cuisine": "Menu to check with restaurant",
+    "fee": "At manager’s discretion",
+    "scope": "discretion",
+    "policy": "The terms state corkage is at the manager’s discretion. No fee or allowance established. Confirm the current restaurant format and arrangement directly. The £30 cakeage fee is not a wine corkage fee.",
+    "source": "https://petershamnurseries.com/terms-and-conditions/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [],
+    "merchants": [
+      {
+        "name": "Bottle Apostle",
+        "address": "59 Abbeville Road, Clapham",
+        "url": "https://www.bottleapostle.com/clapham.html"
+      },
+      {
+        "name": "The Good Wine Shop",
+        "address": "56 Friars Stile Road, Richmond Hill",
+        "url": "https://www.thegoodwineshop.co.uk/pages/shops"
+      }
+    ]
+  },
+  {
+    "id": "angler",
+    "website": "https://anglerrestaurant.com/",
+    "name": "Angler",
+    "neighbourhood": "Moorgate",
+    "area": "City",
+    "cuisine": "Fish & shellfish",
+    "fee": "£50 wine / £100 sparkling · clarify",
+    "scope": "clarify",
+    "policy": "FAQ publishes these fees and excludes spirits, but also says not to bring outside food or drink. This contradiction is unresolved. Get explicit permission before taking wine; no format or quantity limit established.",
+    "source": "https://anglerrestaurant.com/contact-us/",
+    "checked": "2026-09-13",
+    "freeOffer": null,
+    "pairings": [
+      "Chablis for fish and shellfish.",
+      "Traditional-method sparkling for briny starters."
+    ],
+    "merchants": [
+      {
+        "name": "Amathus",
+        "address": "17–19 Leadenhall Market",
+        "url": "https://www.amathusdrinks.com/city-store"
+      }
+    ]
+  }
+]

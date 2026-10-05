@@ -29,17 +29,20 @@ The site also introduces the Corkage Club: a community for wine enthusiasts inte
 
 ## Current implementation
 
-This is currently a static HTML, CSS, and JavaScript website with no build step.
+This is a static HTML, CSS, and JavaScript website with a dependency-free Python build.
 
-- `index.html` — restaurant directory
-- `club.html` — club membership proposition and waitlist
-- `about.html` — philosophy and contact information
-- `data.json` — restaurant records and corkage details
-- `script.js` — restaurant rendering, filtering, details, and suggestions
-- `waitlist.js` — waitlist form behaviour
-- `styles.css` — site styling
+- `scripts/build.py` — page templates and undated editorial articles; generates `dist/`
+- `data.json` — canonical published policy records, scope, sources and editorial suggestions
+- `script.js` — directory search, filters and accessible restaurant dialogs
+- `styles.css` — shared styling
+- `research/` — working research, not served by the website
+- `tests/check_site.py` — build/data/internal-link regression checks
+- `tests/browser_smoke.py` — real-browser checks via installed agent-browser CLI
+- `vercel.json` — Vercel builds into `dist/`; only that directory is public
 
-Restaurant suggestions and waitlist registrations are currently submitted to Google Forms.
+Build with `python3 scripts/build.py`. Serve `dist/`, never the repository root. `scripts/prepare-data.py` records the initial migration and is not part of normal builds; rerunning it overwrites data.json.
+
+Waitlist and suggestion links open the existing Google Forms. Do not claim a submission succeeded from this site, and do not submit test data to live forms. Public-dining records are shown by default; seven special-scope records remain explicitly separated. Editorial guides are undated, with no fabricated historical publication dates.
 
 ## Data expectations
 

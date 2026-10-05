@@ -1,4 +1,8 @@
 .DS_Store
 node_modules/
 .env
-*.log 
+*.log
+.vercel/
+dist/
+__pycache__/
+.vercel
