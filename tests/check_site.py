@@ -44,11 +44,13 @@ for f,p in pages.items():
     for link in p.links:
         url=urlsplit(link)
         if url.scheme or url.netloc:continue
-        target=(f.parent/unquote(url.path)).resolve() if url.path else f
+        target=((OUT/unquote(url.path).lstrip('/')) if url.path.startswith('/') else (f.parent/unquote(url.path))).resolve() if url.path else f
+        if target.is_dir(): target=target/'index.html'
         assert target.is_relative_to(OUT.resolve()),(f,link)
         assert target.exists(),(f,link)
         if url.fragment and target in pages:assert url.fragment in pages[target].ids,(f,link)
 assert len(list((OUT/'journal').glob('*.html')))==4
+assert len(list((OUT/'restaurants').glob('*.html')))==42
 assert not (OUT/'research').exists()
 assert not (OUT/'AGENTS.md').exists()
 print(f'PASS: 42 policies, 35 public / 7 special, 8 public offers, {len(pages)} HTML pages, all internal files and anchors, no historical article dates or closed merchants.')

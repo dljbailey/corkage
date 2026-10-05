@@ -36,7 +36,7 @@
     const r = records.find(item => item.id === id);
     if (!r) return;
     lastOpener = opener || document.querySelector('#search');
-    content.innerHTML = `<p class="eyebrow">${escape(r.neighbourhood)} · ${escape(r.area)} London</p><h2 id="detail-title">${escape(r.name)}</h2><p class="cuisine">${escape(r.cuisine)}</p><span class="status ${r.scope === 'public' ? '' : 'special'}">${escape(labels[r.scope])}</span><p class="detail-fee">${escape(r.fee)}</p><div class="detail-policy"><p>${escape(r.policy)}</p></div><div class="detail-source"><a class="button small" href="${safeLink(r.website)}" target="_blank" rel="noopener noreferrer">Restaurant website ↗</a><a class="text-link" href="${safeLink(r.source)}" target="_blank" rel="noopener noreferrer">Read the official policy source ↗</a><span>Source checked 13 September 2026</span></div><p class="small-note">Website evidence, not a personal confirmation. Source links may open a PDF. Rates and availability can change; agree the full charge before your visit.</p><section class="detail-section"><h3>A bottle to consider</h3>${r.pairings.length ? `<ul>${r.pairings.map(p => `<li>${escape(p)}</li>`).join('')}</ul><p class="small-note">Editorial wine-style suggestions, conditional on the menu you choose. Not restaurant recommendations or merchant stock.</p>` : '<p>We have not verified enough menu detail to suggest a pairing. Ask the restaurant about the current food before choosing your bottle.</p>'}</section><section class="detail-section"><h3>Wine shops to plan around</h3><p class="small-note">Wider-area options, not a nearest-shop ranking. Some require a separate journey. Check current hours, branch stock and collection before travelling.</p><ul class="merchant-list">${r.merchants.map(m => `<li><a href="${safeLink(m.url)}" target="_blank" rel="noopener noreferrer">${escape(m.name)} ↗</a><br>${escape(m.address)}</li>`).join('')}</ul></section><section class="detail-section"><a class="text-link" href="policies.html#${escape(r.id)}">Open the text policy listing →</a></section>`;
+    content.innerHTML = `<p class="eyebrow">${escape(r.neighbourhood)} · ${escape(r.area)} London</p><h2 id="detail-title">${escape(r.name)}</h2><p class="cuisine">${escape(r.cuisine)}</p><span class="status ${r.scope === 'public' ? '' : 'special'}">${escape(labels[r.scope])}</span><p class="detail-fee">${escape(r.fee)}</p><div class="detail-policy"><p>${escape(r.policy)}</p></div><div class="detail-source"><a class="button small" href="${safeLink(r.website)}" target="_blank" rel="noopener noreferrer">Restaurant website ↗</a><a class="text-link" href="${safeLink(r.source)}" target="_blank" rel="noopener noreferrer">Read the official policy source ↗</a><span>Source checked 13 September 2026</span></div><p class="small-note">Website evidence, not a personal confirmation. Source links may open a PDF. Rates and availability can change; agree the full charge before your visit.</p><section class="detail-section"><h3>A bottle to consider</h3>${r.pairings.length ? `<ul>${r.pairings.map(p => `<li>${escape(p)}</li>`).join('')}</ul><p class="small-note">Editorial wine-style suggestions, conditional on the menu you choose. Not restaurant recommendations or merchant stock.</p>` : '<p>We have not verified enough menu detail to suggest a pairing. Ask the restaurant about the current food before choosing your bottle.</p>'}</section><section class="detail-section"><h3>Wine shops to plan around</h3><p class="small-note">Wider-area options, not a nearest-shop ranking. Some require a separate journey. Check current hours, branch stock and collection before travelling.</p><ul class="merchant-list">${r.merchants.map(m => `<li><a href="${safeLink(m.url)}" target="_blank" rel="noopener noreferrer">${escape(m.name)} ↗</a><br>${escape(m.address)}</li>`).join('')}</ul></section><section class="detail-section"><a class="text-link" href="restaurants/${escape(r.id)}.html">Open the full corkage guide →</a></section>`;
     dialog.dataset.restaurant = id;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('dialog-open');
@@ -46,7 +46,14 @@
   dialog.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { if (e.target === dialog) { const rect = dialog.getBoundingClientRect(); if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) dialog.close(); } });
   dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); updateURL(); if (lastOpener?.isConnected && !lastOpener.closest('[hidden]')) lastOpener.focus({ preventScroll: true }); });
-  grid.addEventListener('click', e => { const button = e.target.closest('[data-restaurant]'); if (button) openRestaurant(button.dataset.restaurant, button); });
+  grid.addEventListener('click', e => {
+    const link = e.target.closest('[data-restaurant]');
+    // Keep real links crawlable and preserve open-in-new-tab / no-JS navigation.
+    if (link && records.length && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+      e.preventDefault();
+      openRestaurant(link.dataset.restaurant, link);
+    }
+  });
   form.addEventListener('submit', e => e.preventDefault());
   form.addEventListener('input', render);
   form.addEventListener('change', render);
@@ -64,7 +71,6 @@
   fetch('data.json').then(response => { if (!response.ok) throw new Error('Data unavailable'); return response.json(); }).then(data => {
     if (!Array.isArray(data) || data.length !== 42) throw new Error('Invalid directory');
     records = data;
-    for (const button of grid.querySelectorAll('button')) button.disabled = false;
     readURL();
     document.documentElement.dataset.directoryReady = 'true';
     window.addEventListener('popstate', readURL);
@@ -74,6 +80,5 @@
     for (const card of grid.children) card.hidden = false;
     document.querySelector('#scope-note').textContent = 'All arrangements shown below. Special-scope listings are not general BYO permission.';
     const fallback = document.createElement('p'); fallback.innerHTML = '<a class="button" href="policies.html">Read all restaurant policies →</a>'; grid.before(fallback);
-    for (const button of grid.querySelectorAll('button')) { const link = document.createElement('a'); link.href = `policies.html#${button.dataset.restaurant}`; link.className = 'card-open'; link.textContent = button.textContent; button.replaceWith(link); }
   });
 })();
